@@ -1,0 +1,32 @@
+.header
+
+.messages
+  .messages__left-category
+    .messages__left-category__user
+      .messages__left-category__user__user-name
+        test-user
+      .messages__left-category__user__user-edit1
+        = fa_icon 'facebook'
+      .messages__left-category__user__user-edit2
+        = fa_icon 'facebook'
+    .messages__left-category__groups
+      .messages__left-category__groups__group-name
+        sample-group
+      .messages__left-category__groups__first-message
+        hello
+
+  .messages__main-category
+    .messages__main-category__group
+      .messages__main-category__group__group-name
+        test-group
+        .messages__main-category__group__group-name__member
+          user1,user2
+      .messages__main-category__group__group-edit
+        = link_to "#", class:"edit_btn" do
+          Edit
+    .messages__main-category__messages
+
+    .messages__main-category__message
+      = form_for "#" do |f|
+        = f.text_field :content, class: 'text_message'
+        = f.submit
